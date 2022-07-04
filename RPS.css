@@ -94,7 +94,7 @@ body {
 
 }
 
-@media and (max-width: 612px) {
+@media screen and (max-width: 612px) {
     .title{
         text-align: center;
 
