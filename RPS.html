@@ -7,7 +7,7 @@
         <meta charset="UFT-8">
 
         <meta name="viewport"
-                 content="width=device-width.initial-scale=1.0">
+                 content="width=device-width,initial-scale=1.0">
 
          <link rel="stylesheet" href="RPS.css">
 
@@ -16,52 +16,57 @@
     </head>
 
     <body>
-        <section class="game">
 
-            <div class="title">Rock Paper Scissors</div>
+        <header class="header">
 
-           <!--Score display-->
+            <h1 class="title">ROCK PAPER SCISSORS</h1>
 
-            <div class="score">
+        </header>
 
-                <div class="playerScore">
-
-                    <h2>Player</h2>
-                    <p class="p-count count">0</p>
-
-                </div>
-
-                <div class="computerScore">
-
-                    <h2>Computer</h2>
-                    <p class="c-count count">0</p>
-
-                </div>
-
+        <!--scoreboard-->
+        <main class="main">
+        <div class="scoreboard">
+            <h2 class="score-info" id="scoreInfo">Make your selection</h2>
+            <h3 class="score-message" id="scoreMessage">
+                Can you save the world in 5 rounds?
+            </h3>
+            <div class="score-container">
+                <div class="score-box">
+                    <div class="sign" id="playerSign">🌚</div>
+                    <p class="score" id="playerScore">Player: 0</p>
             </div>
-
-            <div class="move">Choose your move</div>
-
-            <div class="movesLeft">Moves Remaining: 5</div>
-
+            <div class="score-box">
+                <div class="sign" id="computerSign">🌚</div>
+                <p class="score" id="computerScore">Computer: 0</p>
+                </div>
+            </div>
+        </div>
             <!--game options-->
 
-            <div class="options">
+            <div class="buttons">
 
-                <button class="Rock">👊</button>
-                <button class="Paper">✋</button>
-                <button class="Scissors">✌️</button>
-
+                <button class="option" id="rockBtn">
+                    <div class="sign">✊</div>
+                </button>
+                <button class="option" id="paperBtn">
+                    <div class="sign">✋</div>
+                </button>
+                <button class="option" id="scissorsBtn">
+                    <div class="sign">✌️</div>
+                </button>
             </div>
+            </main>
 
-            <div class="result"></div>
+           <div class="modal" id="endgameModal">
+            <p class="modal-title" id="endgameMsg"></p>
+            <button class="btn btn-restart" id="restartBtn">Try again</button>
+           </div>
 
-            <button class="restart">restart</button>
+           <div class="overlay" id="overlay"></div>
 
         </section>
 
         <script src="RPS.js"></script>
-
     </body>
 
 </html>
