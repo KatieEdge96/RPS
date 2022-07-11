@@ -1,6 +1,6 @@
 //GAME
 
-let playScore = 0
+let playerScore = 0
 let computerScore = 0
 let roundWinner = ''
 
@@ -34,7 +34,7 @@ function getRandomChouce() {
             return 'ROCK'
             case 1:
                 return 'PAPER'
-                case 3:
+                case 2:
                     return 'SCISSORS'
     }
 }
@@ -132,10 +132,11 @@ function updateScore() {
       )} is beaten by ${computerSelection.toLowerCase()}`
       return
     }
-  
+  console.log (computerSelection)
     scoreMessage.textContent = `${capitalizeFirstLetter(
       playerSelection
     )} ties with ${computerSelection.toLowerCase()}`
+    
   }
   
   function capitalizeFirstLetter(string) {
